@@ -5,6 +5,7 @@ using UnityEngine;
 public class Field : MonoBehaviour
 {
     public Platform platform;
+    public GameObject wall;
     public int roomX;
     public int roomX1;
     public int roomZ;
