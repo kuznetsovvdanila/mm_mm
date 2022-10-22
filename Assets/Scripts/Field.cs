@@ -5,8 +5,12 @@ using UnityEngine;
 public class Field : MonoBehaviour
 {
     public GameObject template;
-    public int room_x;
-    public int room_z;
+    public int roomX;
+    public int roomX1;
+    public int roomX2;
+    public int roomZ;
+    public int roomZ1;
+    public int roomZ2;
 
     void RectangleGenerator()
     {
@@ -14,12 +18,14 @@ public class Field : MonoBehaviour
         float sx = template.transform.localScale.x;
         float sz = template.transform.localScale.z;
         Vector3 v = new Vector3(0, 0, 0);
-        room_x = Random.Range(7, 15);
-        room_z = Random.Range(7, 15);
-        for (int k = 0; k < room_z; k++){
+        roomX = Random.Range(7, 15);
+        roomZ = Random.Range(7, 15);
+        for (int k = 0; k < roomZ; k++)
+        {
             v.z = k*sz;
             plates.Add(new List<GameObject>());
-            for (int i = 0; i < room_x; i++){
+            for (int i = 0; i < roomX; i++) 
+            {
                 v.x = i*sx;
                 plates[k].Add(Instantiate(template, parent:this.transform));
                 plates[k][i].transform.position = v;
@@ -29,7 +35,7 @@ public class Field : MonoBehaviour
 
     void OtherShapeGenerator()
     {
-        
+        List<List<GameObject>> plates = new List<List<GameObject>>();
     }
 
     void Start()
