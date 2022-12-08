@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    private float Health { get; set; }
-    private float Damage { get; set; }
-    private float Defence { get; set; }
+    private float Health = 10;
+    private float Damage = 10;
+    private float Defence = 5;
+
+    public void setStartPosition(float x, float z)
+    {
+        Vector3 vector = new Vector3(x, 10, z);
+        transform.position = vector;
+    }
+    
 
     // Start is called before the first frame update
     void Start()
