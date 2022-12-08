@@ -10,7 +10,7 @@ public class Platform : MonoBehaviour
     private void center_object(Field Parent){
         GameObject _object = Parent.wall;
         _object = Instantiate(_object, parent:Parent.transform);
-        _object.transform.position = new Vector3(this.transform.position.x, this.transform.localScale.y/2+_object.transform.localScale.y/2, this.transform.position.z);
+        _object.transform.position = new Vector3(this.transform.position.x, -this.transform.localScale.y/2-_object.transform.localScale.y/2, this.transform.position.z);
     }
     private void OnMouseEnter() {
         standart_material = this.GetComponent<MeshRenderer>().material; 
