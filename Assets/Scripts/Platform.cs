@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,12 @@ public class Platform : MonoBehaviour
     private void OnMouseExit() {
         this.GetComponent<MeshRenderer>().material = standart_material;
     }
+
+    private void OnMouseDown()
+    {
+        // playerMove(transform.position.x, transform.position.z);
+    }
+
     public void SetPlatform(Field Parent, Vector3 vector3, bool isActive){
         this.transform.parent = Parent.transform;
         this.transform.position = vector3;

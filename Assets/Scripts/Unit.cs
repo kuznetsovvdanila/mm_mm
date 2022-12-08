@@ -13,6 +13,11 @@ public class Unit : MonoBehaviour
         Vector3 vector = new Vector3(x, 10, z);
         transform.position = vector;
     }
+
+    // public playerMove(float x, float z)
+    // {
+    //     
+    // }
     
 
     // Start is called before the first frame update

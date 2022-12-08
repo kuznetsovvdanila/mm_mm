@@ -62,13 +62,11 @@ public class Field : MonoBehaviour
     void Start()
     {
         // field type
-        int fieldType = Random.Range(1, 2);
-        if (!(fieldType > 1))
-        {
-            RectangleGenerator();
-        }
+        int fieldType = Random.Range(1, 3);
+        if (fieldType > 1) { RectangleGenerator(); }
         else { OtherShapeGenerator(); }
-        player = Unit.Instantiate(player);
+        
+        player = Instantiate(player);
         player.setStartPosition(platforms[1][1].transform.position.x, platforms[1][1].transform.position.z);
     }
 
